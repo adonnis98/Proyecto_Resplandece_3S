@@ -30,180 +30,140 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMenuPrincipal));
             panel1 = new Panel();
-            txtConfirmarContrasena = new TextBox();
-            label4 = new Label();
-            linkLabel2 = new LinkLabel();
-            linkLabel1 = new LinkLabel();
-            btnGestionUsuarios = new Button();
-            txtNuevaContrasena = new TextBox();
-            txtUsuario = new TextBox();
-            label3 = new Label();
-            label2 = new Label();
-            label1 = new Label();
+            menuStrip1 = new MenuStrip();
+            aToolStripMenuItem = new ToolStripMenuItem();
+            gestionUsuarioToolStripMenuItem = new ToolStripMenuItem();
+            gestionTutoresToolStripMenuItem = new ToolStripMenuItem();
+            fundaciónToolStripMenuItem = new ToolStripMenuItem();
+            administraciónDeBeneficiariosToolStripMenuItem = new ToolStripMenuItem();
+            listatadoDeBeneficiariosToolStripMenuItem = new ToolStripMenuItem();
+            ayudaToolStripMenuItem = new ToolStripMenuItem();
+            acercaDeToolStripMenuItem = new ToolStripMenuItem();
+            cerrarSesiónToolStripMenuItem = new ToolStripMenuItem();
             panel1.SuspendLayout();
+            menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.BackColor = Color.Transparent;
             panel1.BorderStyle = BorderStyle.FixedSingle;
-            panel1.Controls.Add(txtConfirmarContrasena);
-            panel1.Controls.Add(label4);
-            panel1.Controls.Add(linkLabel2);
-            panel1.Controls.Add(linkLabel1);
-            panel1.Controls.Add(btnGestionUsuarios);
-            panel1.Controls.Add(txtNuevaContrasena);
-            panel1.Controls.Add(txtUsuario);
-            panel1.Controls.Add(label3);
-            panel1.Controls.Add(label2);
-            panel1.Controls.Add(label1);
+            panel1.Controls.Add(menuStrip1);
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(0, 0);
+            panel1.Margin = new Padding(4, 5, 4, 5);
             panel1.Name = "panel1";
-            panel1.Size = new Size(800, 450);
+            panel1.Size = new Size(1213, 839);
             panel1.TabIndex = 3;
+            panel1.Paint += panel1_Paint_1;
             // 
-            // txtConfirmarContrasena
+            // menuStrip1
             // 
-            txtConfirmarContrasena.BorderStyle = BorderStyle.FixedSingle;
-            txtConfirmarContrasena.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtConfirmarContrasena.Location = new Point(315, 316);
-            txtConfirmarContrasena.Name = "txtConfirmarContrasena";
-            txtConfirmarContrasena.PasswordChar = '*';
-            txtConfirmarContrasena.Size = new Size(204, 29);
-            txtConfirmarContrasena.TabIndex = 10;
+            menuStrip1.ImageScalingSize = new Size(24, 24);
+            menuStrip1.Items.AddRange(new ToolStripItem[] { aToolStripMenuItem, fundaciónToolStripMenuItem, ayudaToolStripMenuItem, cerrarSesiónToolStripMenuItem });
+            menuStrip1.Location = new Point(0, 0);
+            menuStrip1.Name = "menuStrip1";
+            menuStrip1.Size = new Size(1211, 33);
+            menuStrip1.TabIndex = 9;
+            menuStrip1.Text = "menuStrip1";
             // 
-            // label4
+            // aToolStripMenuItem
             // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Bookman Old Style", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label4.Location = new Point(49, 321);
-            label4.Name = "label4";
-            label4.Size = new Size(260, 24);
-            label4.TabIndex = 9;
-            label4.Text = "Confirmar Contraseña:";
+            aToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { gestionUsuarioToolStripMenuItem, gestionTutoresToolStripMenuItem });
+            aToolStripMenuItem.Name = "aToolStripMenuItem";
+            aToolStripMenuItem.Size = new Size(147, 29);
+            aToolStripMenuItem.Text = "Administración";
             // 
-            // linkLabel2
+            // gestionUsuarioToolStripMenuItem
             // 
-            linkLabel2.AutoSize = true;
-            linkLabel2.Font = new Font("Bookman Old Style", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            linkLabel2.LinkBehavior = LinkBehavior.NeverUnderline;
-            linkLabel2.LinkColor = Color.Black;
-            linkLabel2.Location = new Point(257, 454);
-            linkLabel2.Name = "linkLabel2";
-            linkLabel2.Size = new Size(116, 19);
-            linkLabel2.TabIndex = 8;
-            linkLabel2.TabStop = true;
-            linkLabel2.Text = "Crear Usuario";
+            gestionUsuarioToolStripMenuItem.Name = "gestionUsuarioToolStripMenuItem";
+            gestionUsuarioToolStripMenuItem.Size = new Size(220, 34);
+            gestionUsuarioToolStripMenuItem.Text = "Crear Usuario";
+            gestionUsuarioToolStripMenuItem.Click += gestionUsuarioToolStripMenuItem_Click;
             // 
-            // linkLabel1
+            // gestionTutoresToolStripMenuItem
             // 
-            linkLabel1.AutoSize = true;
-            linkLabel1.Font = new Font("Bookman Old Style", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            linkLabel1.LinkBehavior = LinkBehavior.NeverUnderline;
-            linkLabel1.LinkColor = Color.Black;
-            linkLabel1.Location = new Point(228, 482);
-            linkLabel1.Name = "linkLabel1";
-            linkLabel1.Size = new Size(174, 19);
-            linkLabel1.TabIndex = 7;
-            linkLabel1.TabStop = true;
-            linkLabel1.Text = "Olvide mi contraseña.";
+            gestionTutoresToolStripMenuItem.Name = "gestionTutoresToolStripMenuItem";
+            gestionTutoresToolStripMenuItem.Size = new Size(220, 34);
+            gestionTutoresToolStripMenuItem.Text = "Crear Tutores";
+            gestionTutoresToolStripMenuItem.Click += gestionTutoresToolStripMenuItem_Click;
             // 
-            // btnGestionUsuarios
+            // fundaciónToolStripMenuItem
             // 
-            btnGestionUsuarios.BackColor = Color.Orange;
-            btnGestionUsuarios.FlatStyle = FlatStyle.Flat;
-            btnGestionUsuarios.Font = new Font("Bookman Old Style", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnGestionUsuarios.Location = new Point(304, 381);
-            btnGestionUsuarios.Name = "btnGestionUsuarios";
-            btnGestionUsuarios.Size = new Size(180, 31);
-            btnGestionUsuarios.TabIndex = 6;
-            btnGestionUsuarios.Text = "Gestionar Usuarios";
-            btnGestionUsuarios.UseVisualStyleBackColor = false;
-            btnGestionUsuarios.Click += btnGestionUsuarios_Click;
+            fundaciónToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { administraciónDeBeneficiariosToolStripMenuItem, listatadoDeBeneficiariosToolStripMenuItem });
+            fundaciónToolStripMenuItem.Name = "fundaciónToolStripMenuItem";
+            fundaciónToolStripMenuItem.Size = new Size(110, 29);
+            fundaciónToolStripMenuItem.Text = "Fundación";
             // 
-            // txtNuevaContrasena
+            // administraciónDeBeneficiariosToolStripMenuItem
             // 
-            txtNuevaContrasena.BorderStyle = BorderStyle.FixedSingle;
-            txtNuevaContrasena.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtNuevaContrasena.Location = new Point(325, 195);
-            txtNuevaContrasena.Name = "txtNuevaContrasena";
-            txtNuevaContrasena.PasswordChar = '*';
-            txtNuevaContrasena.Size = new Size(204, 29);
-            txtNuevaContrasena.TabIndex = 5;
+            administraciónDeBeneficiariosToolStripMenuItem.Name = "administraciónDeBeneficiariosToolStripMenuItem";
+            administraciónDeBeneficiariosToolStripMenuItem.Size = new Size(299, 34);
+            administraciónDeBeneficiariosToolStripMenuItem.Text = "Crear Beneficiario";
+            administraciónDeBeneficiariosToolStripMenuItem.Click += administraciónDeBeneficiariosToolStripMenuItem_Click;
             // 
-            // txtUsuario
+            // listatadoDeBeneficiariosToolStripMenuItem
             // 
-            txtUsuario.BorderStyle = BorderStyle.FixedSingle;
-            txtUsuario.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtUsuario.Location = new Point(325, 112);
-            txtUsuario.Name = "txtUsuario";
-            txtUsuario.Size = new Size(204, 29);
-            txtUsuario.TabIndex = 4;
-            txtUsuario.TextChanged += txtUsuario_TextChanged;
+            listatadoDeBeneficiariosToolStripMenuItem.Name = "listatadoDeBeneficiariosToolStripMenuItem";
+            listatadoDeBeneficiariosToolStripMenuItem.Size = new Size(299, 34);
+            listatadoDeBeneficiariosToolStripMenuItem.Text = "Listado de Beneficiarios";
+            listatadoDeBeneficiariosToolStripMenuItem.Click += listatadoDeBeneficiariosToolStripMenuItem_Click;
             // 
-            // label3
+            // ayudaToolStripMenuItem
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Bookman Old Style", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.Location = new Point(71, 200);
-            label3.Name = "label3";
-            label3.Size = new Size(215, 24);
-            label3.TabIndex = 3;
-            label3.Text = "Nueva Contraseña:";
+            ayudaToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { acercaDeToolStripMenuItem });
+            ayudaToolStripMenuItem.Name = "ayudaToolStripMenuItem";
+            ayudaToolStripMenuItem.Size = new Size(98, 29);
+            ayudaToolStripMenuItem.Text = "Reportes";
             // 
-            // label2
+            // acercaDeToolStripMenuItem
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Bookman Old Style", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.Location = new Point(89, 117);
-            label2.Name = "label2";
-            label2.Size = new Size(101, 24);
-            label2.TabIndex = 2;
-            label2.Text = "Usuario:";
+            acercaDeToolStripMenuItem.Name = "acercaDeToolStripMenuItem";
+            acercaDeToolStripMenuItem.Size = new Size(203, 34);
+            acercaDeToolStripMenuItem.Text = "Acerca de...";
             // 
-            // label1
+            // cerrarSesiónToolStripMenuItem
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Bookman Old Style", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.Black;
-            label1.Location = new Point(184, 22);
-            label1.Name = "label1";
-            label1.Size = new Size(417, 32);
-            label1.TabIndex = 1;
-            label1.Text = "Recuperación de Contraseña";
-            label1.TextAlign = ContentAlignment.MiddleCenter;
+            cerrarSesiónToolStripMenuItem.Name = "cerrarSesiónToolStripMenuItem";
+            cerrarSesiónToolStripMenuItem.Size = new Size(132, 29);
+            cerrarSesiónToolStripMenuItem.Text = "Cerrar Sesión";
+            cerrarSesiónToolStripMenuItem.Click += cerrarSesiónToolStripMenuItem_Click;
             // 
             // FormMenuPrincipal
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1213, 839);
             Controls.Add(panel1);
             Icon = (Icon)resources.GetObject("$this.Icon");
+            IsMdiContainer = true;
+            Margin = new Padding(4, 5, 4, 5);
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "FormMenuPrincipal";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "FormMenuPrincipal";
+            WindowState = FormWindowState.Maximized;
             Load += FormMenuPrincipal_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            menuStrip1.ResumeLayout(false);
+            menuStrip1.PerformLayout();
             ResumeLayout(false);
         }
 
         #endregion
 
         private Panel panel1;
-        private TextBox txtConfirmarContrasena;
-        private Label label4;
-        private LinkLabel linkLabel2;
-        private LinkLabel linkLabel1;
-        private Button btnGestionUsuarios;
-        private TextBox txtNuevaContrasena;
-        private TextBox txtUsuario;
-        private Label label3;
-        private Label label2;
-        private Label label1;
+        private MenuStrip menuStrip1;
+        private ToolStripMenuItem aToolStripMenuItem;
+        private ToolStripMenuItem fundaciónToolStripMenuItem;
+        private ToolStripMenuItem ayudaToolStripMenuItem;
+        private ToolStripMenuItem gestionUsuarioToolStripMenuItem;
+        private ToolStripMenuItem gestionTutoresToolStripMenuItem;
+        private ToolStripMenuItem administraciónDeBeneficiariosToolStripMenuItem;
+        private ToolStripMenuItem acercaDeToolStripMenuItem;
+        private ToolStripMenuItem listatadoDeBeneficiariosToolStripMenuItem;
+        private ToolStripMenuItem cerrarSesiónToolStripMenuItem;
     }
 }
